@@ -1,19 +1,545 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
+  <head>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="./filter.js" defer></script>
+    <script src="./arrays-&-for-loops.js" defer></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+
+    <title>IM Recipe</title>
+
+  </head>
+
+  <body>
+
+    <h1>Interactive Media Recommended Recipes</h1>
+
+    <div class="FilterSection">     
+
+      <details class="FilterBox">
+        <summary>Dietary</summary>
+        <button class="FilterButton" onclick='filterCategory("M", this)'>Meat based</button>
+        <button class="FilterButton" onclick='filterCategory("P", this)'>Pescatarian</button>
+        <button class="FilterButton" onclick='filterCategory("V", this)'>Vegetarian</button>
+      </details>
+
+      <details class="FilterBox">
+        <summary>Course</summary>
+        <button class="FilterButton" onclick='filterCategory("SNA", this)'>Snack</button>
+        <button class="FilterButton" onclick='filterCategory("SAL", this)'>Salad</button>
+        <button class="FilterButton" onclick='filterCategory("MAI", this)'>Main</button>
+        <button class="FilterButton" onclick='filterCategory("SWE", this)'>Sweet</button>
+      </details>
+
+      <details class="FilterBox">
+        <summary>Cook Time</summary>
+        <button class="FilterButton" onclick='filterCategory("L15", this)'>Less than 15 mins</button>
+        <button class="FilterButton" onclick='filterCategory("HAH", this)'>Half an Hour</button>
+        <button class="FilterButton" onclick='filterCategory("1HM", this)'>1 Hour and More</button>
+      </details>
+
+      <details class="FilterBox">
+        <summary>Author</summary>
+        <button class="FilterButton" onclick='filterCategory("CLM", this)'>Carla Lalli Music</button>
+        <button class="FilterButton" onclick='filterCategory("HM", this)'>Hetty McKinnon</button>
+        <button class="FilterButton" onclick='filterCategory("KLA", this)'>J. Kenji López-Alt</button>
+        <button class="FilterButton" onclick='filterCategory("MA", this)'>Maangchi</button>
+        <button class="FilterButton" onclick='filterCategory("RecipeBox", this)'>All Author</button>
+      </details>
+
+    </div>
+
+    <section>
+
+      <!-- Recipe 1 -->
+      <div class="RecipeBox HM V MAI HAH">
+
+        <div>
+          <p class="RecipeName">Baked Puttanesca Risotto with Olives, Lemon and Parsley</p>
+          <p class="Author">Author: Hetty Mckinnon</p>
+        </div>
+        
+        <div class="RecipeImageContainer">
+          <img class="RecipeImg" src="./images/Puttanesca.jpg" alt="bowl of puttanesca pasta" />
+        </div>
+          <p class="Attribution">
+            "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/10559879@N00/5996763901">Spaghetti Puttanesca con Tonno</a>" by 
+            <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/10559879@N00">avlxyz</a> is licensed under 
+            <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=openverse">
+              CC BY-NC-SA 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+            </a>
+          </p>
+
+        <dl>
+          <dt>Time to Cook: 0:10 prep time - 0:30 cook time</dt>
+          <dt>Dietary: Vegetarian</dt>
+          <dt>Cuisine: Italian</dt>
+          <dt>Course: Main</dt>
+          <dt>Servings: 4 to 6</dt>
+          <dt>Skill Level: Low</dt>
+          <dt>Special Equipment: Ovenproof Dutch oven</dt>
+          <dt><a class="RecipeLink" href="https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338">Link to Recipe</a></dt>
+        </dl>
+
+      </div>
+
+      <!-- Recipe 2 -->
+      <div class="RecipeBox HM V SAL 1HM">
+
+        <div>
+          <p class="RecipeName">Caprese Salad with Slow-Roasted Tomatoes, Rocket and Basil Gremolata</p>
+          <p class="Author">Author: Hetty Mckinnon</p>
+        </div>
+
+        <div class="RecipeImageContainer">
+          <img class="RecipeImg" src="./images/Caprese.jpg" alt="plate of caprese salad" />
+        </div>
+          <p class="Attribution">
+            "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/25597828@N00/4254859304">Caprese Salad</a>" by 
+            <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/25597828@N00">wEnDaLicious</a> is licensed under 
+            <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nd-nc/2.0/jp/?ref=openverse">
+              CC BY-NC-ND 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+            </a>
+          </p>
+
+        <dl>
+          <dt>Time to Cook: 75-105 mins</dt>
+          <dt>Dietary: Vegetarian</dt>
+          <dt>Cuisine: Italian</dt>
+          <dt>Course: Salad</dt>
+          <dt>Servings: ?</dt>
+          <dt>Skill Level: Low</dt>
+          <dt>Special Equipment: N/A</dt>
+          <dt><a class="RecipeLink" href="https://www.abc.net.au/everyday/caprese-salad-slow-roasted-tomato-rocket-basil-gremolata-recipe/10776846">Link to Recipe</a></dt>
+        </dl>
+
+      </div>
+
+      <!-- Recipe 3 -->
+      <div class="RecipeBox KLA V SNA HAH">
+
+        <div>
+          <p class="RecipeName">Crispy Enoki and Onion Fritters with Thai Curry Mayo Recipe</p>
+          <p class="Author">Author: J. Kenji López-Alt</p>
+        </div>
+        
+        <div class="RecipeImageContainer">
+          <img class="RecipeImg" src="./images/Enoki.jpg" alt="enoki mushrooms" />
+        </div>
+          <p class="Attribution">
+            "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/48600074651@N01/107148202">brown enoki mushrooms</a>" by 
+            <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/48600074651@N01">chotda</a> is licensed under 
+            <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nd-nc/2.0/jp/?ref=openverse">
+              CC BY-NC-ND 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+            </a>
+          </p> 
+
+        <dl>
+          <dt>Time to Cook: 30 mins</dt>
+          <dt>Dietary: Vegetarian</dt>
+          <dt>Cuisine: Fusion</dt>
+          <dt>Course: Snack, Savoury</dt>
+          <dt>Servings: 4 to 6</dt>
+          <dt>Skill Level: Medium</dt>
+          <dt>Special Equipment: N/A</dt>
+          <dt><a class="RecipeLink" href="https://www.seriouseats.com/crispy-enoki-and-onion-fritter-with-thai-curry-mayo-recipe">Link to Recipe</a></dt>
+        </dl>
+
+      </div>
+
+        <!-- Recipe 4 -->
+        <div class="RecipeBox MA V SNA SWE 1HM">
+
+          <div>
+            <p class="RecipeName">Fluffy Steamed Buns filled with Sweet Red Beans</p>
+            <p class="Author">Author: Maangchi</p>
+          </div>
+          
+          <div class="RecipeImageContainer">
+            <img class="RecipeImg" src="./images/Red_Bean_Bun.jpg" alt="ripped open steamed bun with red bean paste" />
+          </div>
+            <p class="Attribution">
+              "<a  class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/10559879@N00/33435831771">Sweet red bean bun 豆沙包 AUD2 - Wing Loong, Melbourne</a>" by 
+              <a  class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/10559879@N00">avlxyz</a> is licensed under 
+              <a  class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/2.0/?ref=openverse">
+                CC BY-NC 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              </a>
+            </p>
     
-    <head>
+          <dl>
+            <dt>Time to Cook: ~ 11 hours preperation. 15 mins to cook</dt>
+            <dt>Dietary: Vegetarian</dt>
+            <dt>Cuisine: Korean</dt>
+            <dt>Course: Snack, Sweet</dt>
+            <dt>Servings: 10 pieces</dt>
+            <dt>Skill Level: Medium</dt>
+            <dt>Special Equipment: N/A</dt>
+            <dt><a class="RecipeLink" href="https://www.maangchi.com/recipe/jjinppang">Link to Recipe</a></dt>
+          </dl>
+  
+        </div>
 
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Recipe 5 -->
+        <div class="RecipeBox KLA V SNA SWE 1HM">
 
-        <link rel="stylesheet" href="style.css">
+          <div>
+            <p class="RecipeName">The Food Lab's Chocolate Chip Cookies</p>
+            <p class="Author">Author: J. Kenji López-Alt</p>
+          </div>
+   
+          <div class="RecipeImageContainer">
+            <img class="RecipeImg" src="./images/Cookies.jpg" alt="plate of chocolate chip cookies" />
+          </div>
+            <p class="Attribution">
+              "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/70757891@N00/7133349441">Browned butter chocolate chip cookies</a>" by 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/70757891@N00">grongar</a> is licensed under 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/2.0/?ref=openverse">
+                CC BY 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              </a>
+            </p>
 
-        <script src="script.js"></script>
+          <dl>
+            <dt>Time to Cook: 45mins prep. 35mins to cook</dt>
+            <dt>Dietary: Vegetarian</dt>
+            <dt>Cuisine: Western</dt>
+            <dt>Course: Snack, Sweet</dt>
+            <dt>Servings: 28 cookies</dt>
+            <dt>Skill Level: Low</dt>
+            <dt>Special Equipment: N/A</dt>
+            <dt><a class="RecipeLink" href=https://www.seriouseats.com/the-food-lab-best-chocolate-chip-cookie-recipe>Link to Recipe</a></dt>
+          </dl>
+  
+        </div>
 
-    </head>
+        <!-- Recipe 6 -->
+        <div class="RecipeBox KLA V SNA L15">
 
-    <body>
+          <div>
+            <p class="RecipeName">Grilled Cheese With Kimchi Recipe</p>
+            <p class="Author">Author: J. Kenji López-Alt</p>
+          </div>
+   
+          <div class="RecipeImageContainer">
+            <img class="RecipeImg" src="./images/Grilled_Cheese.jpg" alt="grilled cheese sandwich with pickles" />
+          </div>
+            <p class="Attribution">
+              "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/85508296@N00/8340994832">Lefty’s Food Truck</a>" by 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/85508296@N00">cherrylet</a> is licensed under 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=openverse">
+                CC BY-NC-SA 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              </a>
+            </p>
 
-    </body>
+          <dl>
+            <dt>Time to Cook: 12 mins</dt>
+            <dt>Dietary: Vegetarian</dt>
+            <dt>Cuisine: Fusion</dt>
+            <dt>Course: Snack, Savoury</dt>
+            <dt>Servings: 1 sandwich</dt>
+            <dt>Skill Level: Low</dt>
+            <dt>Special Equipment: N/A</dt>
+            <dt><a class="RecipeLink" href=https://www.seriouseats.com/grilled-cheese-with-kimchi-recipe>Link to Recipe</a></dt>
+          </dl>
+  
+        </div>
+        
+        <!-- Recipe 7 -->
+        <div class="RecipeBox CLM M MAI 1HM">
+
+          <div>
+            <p class="RecipeName">Hands-Off Pork and Beans</p>
+            <p class="Author">Author: Carla Lalli Music</p>
+          </div>
+   
+          <div class="RecipeImageContainer">
+            <img class="RecipeImg" src="./images/Pork_Beans.jpg" alt="pot of pork and beans" />
+          </div>
+            <p class="Attribution">
+              "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/22798667@N00/6158931731">spicy pork and bean chili</a>" by 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/22798667@N00">telepathicparanoia</a> is licensed under 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nd/2.0/?ref=openverse">
+                CC BY-ND 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              </a>
+            </p> 
+
+          <dl>
+            <dt>Time to Cook: overnight preperation. 4 hours to cook</dt>
+            <dt>Dietary: Meat based</dt>
+            <dt>Cuisine: American</dt>
+            <dt>Course: Snack, Savoury</dt>
+            <dt>Servings: 6 generous servings</dt>
+            <dt>Skill Level: Medium</dt>
+            <dt>Special Equipment: N/A</dt>
+            <dt><a class="RecipeLink" href=https://www.patreon.com/posts/recipe-hands-off-60369279>Link to Recipe</a></dt>
+          </dl>
+  
+        </div>
+
+        <!-- Recipe 8 -->
+        <div class="RecipeBox MA V SNA L15">
+
+          <div>
+            <p class="RecipeName">Kimchi Pancake</p>
+            <p class="Author">Author: Maangchi</p>
+          </div>
+
+          <div class="RecipeImageContainer">
+            <img class="RecipeImg" src="./images/Kimchi_Pancake.jpg" alt="kimchi pancake with bowl of dipping sauce" />
+          </div>
+            <p class="Attribution">
+              "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/w/index.php?curid=54768084">File:Kimchibuchimgae (kimchi pancake).jpg</a>" by 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://pixabay.com/ko/users/sharonang-99559/">sharonang</a> is marked with 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="http://creativecommons.org/publicdomain/zero/1.0/deed.en?ref=openverse">
+                CC0 1.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/zero.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              </a>
+            </p>
+
+          <dl>
+            <dt>Time to Cook: 15 mins</dt>
+            <dt>Dietary: Vegetarian</dt>
+            <dt>Cuisine: Korean</dt>
+            <dt>Course: Snack, Savoury</dt>
+            <dt>Servings: 8 slices</dt>
+            <dt>Skill Level: Low</dt>
+            <dt>Special Equipment: N/A</dt>
+            <dt><a class="RecipeLink" href=https://www.patreon.com/posts/recipe-hands-off-60369279>Link to Recipe</a></dt>
+          </dl>
+  
+        </div>
+
+        <!-- Recipe 9 -->
+        <div class="RecipeBox KLA V MAI HAH">
+
+          <div>
+            <p class="RecipeName">Shakshuka (North African–Style Poached Eggs in Spicy Tomato Sauce)</p>
+            <p class="Author">Author: J. Kenji López-Alt</p>
+          </div>
+
+          <div class="RecipeImageContainer">
+            <img class="RecipeImg" src="./images/Shakshuka.jpg" alt="pan filled with shakshuka" />
+          </div>
+            <p class="Attribution">
+              "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/33993074@N00/14288893837">Shakshuka</a>" by 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/33993074@N00">joyosity</a> is licensed under 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/2.0/?ref=openverse">
+                CC BY 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              </a>
+            </p>
+
+          <dl>
+            <dt>Time to Cook: 35 mins</dt>
+            <dt>Dietary: Vegetarian</dt>
+            <dt>Cuisine: North African</dt>
+            <dt>Course: Main</dt>
+            <dt>Servings: 4 to 6</dt>
+            <dt>Skill Level: Medium</dt>
+            <dt>Special Equipment: N/A</dt>
+            <dt><a class="RecipeLink" href=https://www.seriouseats.com/shakshuka-north-african-shirred-eggs-tomato-pepper-recipe>Link to Recipe</a></dt>
+          </dl>
+  
+        </div>
+
+        <!-- Recipe 10 -->
+        <div class="RecipeBox CLM P MAI 1HM">
+
+          <div>
+            <p class="RecipeName">Spaghetti with Melted Cauliflower Sauce</p>
+            <p class="Author">Author: Carla Lalli Music</p>
+          </div>
+
+          <div class="RecipeImageContainer">
+            <img class="RecipeImg" src="./images/Cauliflower_Spaghetti.jpg" alt="bowl of spaghettie with cauliflower sauce" />
+          </div>
+            <p class="Attribution">
+              "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/35468144810@N01/6240477142">Spaghetti with Cauliflower and Anchovy Breadcrumbs</a>" by 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/35468144810@N01">Girl Interrupted Eating</a> is licensed under 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/2.0/?ref=openverse">
+                CC BY 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              </a>
+            </p>
+
+          <dl>
+            <dt>Time to Cook: 1 hour and 10 minutess</dt>
+            <dt>Dietary: Pescatarian</dt>
+            <dt>Cuisine: Italian</dt>
+            <dt>Course: Main</dt>
+            <dt>Servings: 4 servings</dt>
+            <dt>Skill Level: Low</dt>
+            <dt>Special Equipment: N/A</dt>
+            <dt><a class="RecipeLink" href=https://www.patreon.com/posts/pasta-with-sauce-45042575>Link to Recipe</a></dt>
+          </dl>
+  
+        </div>
+
+        <!-- Recipe 11 -->
+        <div class="RecipeBox MA M MAI 1HM">
+
+          <div>
+            <p class="RecipeName">Sweet, Sour, & Spicy Korean Fried Chicken</p>
+            <p class="Author">Author: Maangchi</p>
+          </div>
+
+          <div class="RecipeImageContainer">
+            <img class="RecipeImg" src="./images/Korean_Fried_Chicken.jpg" alt="plate of fried chicken with pickles and kimchi" />
+          </div>
+            <p class="Attribution">
+              "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/40726522@N02/8563518350">Bon Chon Korean Fried Chicken Wings</a>" by 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/40726522@N02">powerplantop</a> is licensed under 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nd-nc/2.0/jp/?ref=openverse">
+                CC BY-NC-ND 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              </a>
+            </p> 
+
+          <dl>
+            <dt>Time to Cook: 45-50 minutes</dt>
+            <dt>Dietary: Meat based</dt>
+            <dt>Cuisine: Korean</dt>
+            <dt>Course: Main</dt>
+            <dt>Servings: 3 to 4</dt>
+            <dt>Skill Level: Medium</dt>
+            <dt>Special Equipment: N/A</dt>
+            <dt><a class="RecipeLink" href=https://www.maangchi.com/recipe/yangnyeom-tongdak>Link to Recipe</a></dt>
+          </dl>
+  
+        </div>
+
+        <!-- Recipe 12 -->
+        <div class="RecipeBox KLA M MAI 1HM">
+
+          <div>
+            <p class="RecipeName">The Ultimate Beef Stroganoff Recipe</p>
+            <p class="Author">Author: J. Kenji López-Alt</p>
+          </div>
+
+          <div class="RecipeImageContainer">
+            <img class="RecipeImg" src="./images/Stroganoff.jpg" alt="bowl of beef stroganoff pasta" />
+          </div>
+            <p class="Attribution">
+              "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/66606673@N00/4597118575">Beef Stroganoff</a>" by 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/66606673@N00">cobalt123</a> is licensed under 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=openverse">
+                CC BY-NC-SA 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              </a>
+            </p>
+  
+          <dl>
+            <dt>Time to Cook: 55 minutes</dt>
+            <dt>Dietary: Meat based</dt>
+            <dt>Cuisine: Russian</dt>
+            <dt>Course: Main</dt>
+            <dt>Servings: 4 servings</dt>
+            <dt>Skill Level: Medium</dt>
+            <dt>Special Equipment: N/A</dt>
+            <dt><a class="RecipeLink" href=https://www.seriouseats.com/ultimate-beef-stroganof-recipe>Link to Recipe</a></dt>
+          </dl>
+  
+        </div>
+
+        <!-- Recipe 13 -->
+        <div class="RecipeBox CLM V SWE 1HM">
+
+          <div>
+            <p class="RecipeName">Vanilla-Brown Butter Pear Tart</p>
+            <p class="Author">Author: Carla Lalli Musict</p>
+          </div>
+
+          <div class="RecipeImageContainer">
+            <img class="RecipeImg" src="./images/Pear_Tart.jpg" alt="pear tart on a table" />
+          </div>
+            <p class="Attribution">
+              "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/37829433@N03/4711738063">Tarte Amandines aux Poires - Almond-Pear Tart 0205-1550</a>" by 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/37829433@N03">Eat my Cake now</a> is licensed under 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nd-nc/2.0/jp/?ref=openverse">
+                CC BY-NC-ND 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              </a>
+            </p>
+  
+          <dl>
+            <dt>Time to Cook: ~ 3 hours</dt>
+            <dt>Dietary: Vegetarian</dt>
+            <dt>Cuisine: French</dt>
+            <dt>Course: Dessert</dt>
+            <dt>Servings: 8 servings</dt>
+            <dt>Skill Level: Medium</dt>
+            <dt>Special Equipment: Bench scraper, tart pan</dt>
+            <dt><a class="RecipeLink" href=https://www.patreon.com/posts/recipe-vanilla-60100711>Link to Recipe</a></dt>
+          </dl>
+  
+        </div>
+
+        <!-- Recipe 14 -->
+        <div class="RecipeBox HM V MAI HAH">
+
+          <div>
+            <p class="RecipeName">Vegetarian Carbonara with Mushrooms, Miso and Parmesan</p>
+            <p class="Author">Author: Hetty Mckinnon</p>
+          </div>
+
+          <div class="RecipeImageContainer">
+            <img class="RecipeImg" src="./images/Mushroom_Carbonara.jpg" alt="pan filled with mushroom carbonara pasta" />
+          </div>
+            <p class="Attribution">
+              "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/22508531@N08/49471971493">Mushroom carbonara</a>" by 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/22508531@N08">Like_the_Grand_Canyon</a> is licensed under 
+              <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/2.0/?ref=openverse">
+                CC BY-NC 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+                <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+              </a>
+            </p>
+  
+          <dl>
+            <dt>Time to Cook:  0:15 prep time - 0:15 cook time</dt>
+            <dt>Dietary: Vegetarian</dt>
+            <dt>Cuisine: Fusion</dt>
+            <dt>Course: Main</dt>
+            <dt>Servings: 4</dt>
+            <dt>Skill Level: Low</dt>
+            <dt>Special Equipment: N/A</dt>
+            <dt><a class="RecipeLink" href=https://www.abc.net.au/everyday/vegetarian-carbonara-with-mushrooms-and-miso/12426392>Link to Recipe</a></dt>
+          </dl>
+  
+        </div>
+
+    </section>
+
+  </body>
 
 </html>

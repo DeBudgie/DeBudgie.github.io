@@ -1,0 +1,142 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  --col-01:#FCFBED;
+  --col-02:#F2EDD0;
+  --col-03:#F1C02B;
+  --col-04:#2A5943;
+  --col-14: #60B287;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-01);
+  color: var(--col-04);
+  padding: 2vw;
+}
+
+/* I wanted the layout to replicate most shopping websites since you are browsing through what recipes to make. This is why the page is layout as a 3 container longs single-scrolling page. It offers the most viewing, not interrupting the flow, and allows you to read each piece of content easily. */
+.FilterSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.FilterBox{
+  font-family: 'Oxygen', sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* I spaced out the buttons in a central formation to make sure negative space was used well. Each button lacks a border as it's clear from the text drop down menu, highlighting when scrolled over that it is a button to press. */
+.FilterButton{
+  display: flex;
+  flex-direction: row;
+  color: var(--col-04);
+  background-color: var(--col-01);
+  font-family: 'Oxygen', sans-serif;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Added for more interactions */
+.FilterButton:Hover{
+  color: var(--col-14);
+}
+
+/* Added for the recipes layout */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.RecipeBox{
+  background-color: var(--col-02);
+  width: 32%;
+  height: 50%;
+  padding: 15px;
+  margin-bottom: 28px;
+}
+
+.RecipeName{
+  font-family: 'Lobster', cursive;
+  font-weight: lighter;
+  font-size: large;
+}
+
+.Author{
+  font-family: 'Oxygen', sans-serif;
+  font-size: small;
+}
+
+.RecipeImageContainer{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.RecipeImg{
+  max-width: 100%; 
+  height: 200px;
+}
+
+.Attribution{
+  color: var(--col-14);
+  font-size: small;
+  margin-bottom: 10px;
+}
+
+/* Added for more interaction */
+.RecipeLink2{
+  color: var(--col-14);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Added because I was having trouble with my code layout and adding this helped with my content layout. It isn't really needed now since I fixed the problem but nice to keep :D */
+dt{
+  color: var(--col-04);
+  font-family: 'Oxygen', sans-serif;
+  font-size: medium;
+  margin-bottom: 3px;
+}
+
+.RecipeLink{
+  text-decoration: none;
+  color: var(--col-03);
+  cursor: pointer;
+}
+
+/* Added for more interaction */
+.RecipeLink:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Added to make the header pop */
+h1 {
+  text-align: center;
+  color: var(--col-03);
+  font-family: 'Lobster', cursive;
+  font-weight: lighter;
+  margin-top: 20px;
+}
+
+
+
+
+
