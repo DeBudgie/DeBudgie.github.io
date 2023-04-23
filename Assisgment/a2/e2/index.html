@@ -24,6 +24,7 @@
 
     <div class="FilterSection">     
 
+       <!-- Choosing Dietary requirements as a filter is essential. Many choose not to eat and can't eat certain meals because of what is in them. Making this filter a high priority to be included and therefore displayed first. -->
       <details class="FilterBox">
         <summary>Dietary</summary>
         <button class="FilterButton" onclick='filterCategory("M", this)'>Meat based</button>
@@ -31,6 +32,7 @@
         <button class="FilterButton" onclick='filterCategory("V", this)'>Vegetarian</button>
       </details>
 
+       <!-- What type of course the meal is, is the next most important filter to display. Many will visit this site wanting to try something new and will already know what type of course they will need to make, in order to satisfice their hunger. Being able to pinpoint these courses speeds up the process of looking for a new meal. The layout of these courses is also in order that most are familiar with, showing when each meal is typically eaten. Making the list seem natural and easy to understand quickly. -->
       <details class="FilterBox">
         <summary>Course</summary>
         <button class="FilterButton" onclick='filterCategory("SNA", this)'>Snack</button>
@@ -39,6 +41,7 @@
         <button class="FilterButton" onclick='filterCategory("SWE", this)'>Sweet</button>
       </details>
 
+       <!-- Since many people live busy lives, it feels right to add cook time. This allows the user to get an idea of how dedicated they want to be to the cooking process. 15 mins are quick and easy. Half an hour takes more of your time but is doable without being a drag. 1 Hour and more requires you to be dedicated to the process and can be seen as a task. -->
       <details class="FilterBox">
         <summary>Cook Time</summary>
         <button class="FilterButton" onclick='filterCategory("L15", this)'>Less than 15 mins</button>
@@ -46,6 +49,7 @@
         <button class="FilterButton" onclick='filterCategory("1HM", this)'>1 Hour and More</button>
       </details>
 
+       <!-- I placed the Author last as you may not be knowledgeable of their work. The ideal outcome is that by viewing this site, you might just become a fan of their work and want to see what other meals they have made. -->
       <details class="FilterBox">
         <summary>Author</summary>
         <button class="FilterButton" onclick='filterCategory("CLM", this)'>Carla Lalli Music</button>
@@ -60,17 +64,22 @@
     <section>
 
       <!-- Recipe 1 -->
+         <!-- Each recipe box follows a hierarchy layout, showcasing the most important info first with the least important last. -->
       <div class="RecipeBox HM V MAI HAH">
 
         <div>
+             <!-- The title grabs the viewer with a fun display font. Quickly informing the user what this container content is. -->
           <p class="RecipeName">Baked Puttanesca Risotto with Olives, Lemon and Parsley</p>
+             <!-- The author's name is placed here, to respect the creator for their time. The author's name is also commonly placed here, creating a sense of familiarity. -->
           <p class="Author">Author: Hetty Mckinnon</p>
         </div>
         
         <div class="RecipeImageContainer">
+             <!-- Images help visualize what is inside this container and create interest on the page. They are displayed bigger than the text to help a user visually and quickly understand what the content is. -->
           <img class="RecipeImg" src="./images/Puttanesca.jpg" alt="bowl of puttanesca pasta" />
         </div>
           <p class="Attribution">
+              <!-- Copyright of an image is essential to keep but doesn't need to be at the main stage. Therefore it's the only light green text in the container to help it blend in with the background but still be noticeable when needs to be seen. -->
             "<a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/10559879@N00/5996763901">Spaghetti Puttanesca con Tonno</a>" by 
             <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/10559879@N00">avlxyz</a> is licensed under 
             <a class="RecipeLink2" target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=openverse">
@@ -81,18 +90,30 @@
             </a>
           </p>
 
+          <!-- The rest of the content is displayed in order of most to least important but also incorporates visual appeal to help make the text easy to read. -->
         <dl>
+             <!-- Time to cook isn't as important as dietary but since most recipes have a long cook time, this information needed to be displayed first. -->
           <dt>Time to Cook: 0:10 prep time - 0:30 cook time</dt>
           <dt>Dietary: Vegetarian</dt>
+              <!-- Having cuisine up high on the list, heightens interest in making this meal, as the user can spice up their normal meal plan with something different. -->
           <dt>Cuisine: Italian</dt>
           <dt>Course: Main</dt>
+           <!-- Servings, Skill level, and special equipment are all logical components of each recipe. They should not take out the fun of cooking but are still good to know. This is why they are at the bottom of the list. -->
+              <!-- Servings help the user understand if making this is ideal for their current living situation. Will they need to freeze the meal or make this when guests are visiting? -->
           <dt>Servings: 4 to 6</dt>
+             <!-- Skill level is good to know if you are not a confident chef. -->
           <dt>Skill Level: Low</dt>
+             <!-- While many of these Recipes don't have any special equipment requirements, placing this information last informs the user if they really can make this before committing to the link below. This information is key and fresh in their mind as nothing would be worse than starting to make a recipe only to find out you don’t have a tool to keep going. -->
           <dt>Special Equipment: Ovenproof Dutch oven</dt>
+             <!-- Information regarding publisher and updates were removed as they do not impact your cooking experience. If needed they can be found through the link. -->
           <dt><a class="RecipeLink" href="https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338">Link to Recipe</a></dt>
         </dl>
 
       </div>
+
+
+       <!-- No more comments are below. -->
+
 
       <!-- Recipe 2 -->
       <div class="RecipeBox HM V SAL 1HM">

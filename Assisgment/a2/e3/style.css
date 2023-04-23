@@ -1,0 +1,218 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#ffffff;
+  --col-04:#9d9d9d;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* I added a transition here to make the change from light and dark mode more seamline. Adding this interaction indicates something has changed, as the user knowingly clicked on an interactive button. They can know for certain that this feedback was caused by their interactions. */
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  transition-duration: 0.6s;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+/* This transition allows for the a:hover to be seamline and indicates the user was ones here. This acts as short visual history. */
+nav ol li a {
+  transition-duration: 0.3s;
+}
+
+/* Both a:hover and a:active work together as feedback to tell the user they have hovered over and activated a link. Here it's been done by changing the content colours. This approach has become a common technique on websites, therefore the user can draw on past knowledge and understand what interacting with this feedback will do. Being a link to an external website or jump to the required content. */
+nav ol li a:hover {
+  font-size: 1rem;
+  color: var(--col-04);
+}
+
+/* Added code */
+nav ol li a:active {
+  font-size: 1rem;
+  color: var(--col-02);
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;  
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+/* This button feedback is the same as the nav feedback but changes the background colour. This is a more predominant highlighting as the button is isolated from other content and having a large change helps indicate you can interact with it. The cursor also changes to the universally understood pointer that acts as another visual indicator you can press this button. */
+#mode-button{
+  float: right;
+  position: sticky;
+  top: 1rem;
+  padding: 10px;
+  transition-duration: 0.6s;
+  cursor: pointer;
+}
+
+/* Added and communicate the same as the ol list above*/
+#mode-button:hover {
+  background-color: var(--col-04);
+}
+
+/* Added code*/
+#mode-button:active {
+  background-color: var(--col-02);
+}
+
+
+/* Index Code */
+#load-body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* I made the link look more like a button to quickly register in the user's mind that this is a button to interact with on this empty index page. The colour used represents the page's overall style and makes the button belong. There is also a cursor to back up the visual. */
+#load-link{
+  line-height: 1rem;
+  background-color: var(--col-03);
+  border-color: var(--col-01);
+  border-radius: 5px;
+  transition-duration: 0.7s;
+  cursor: pointer;
+}
+
+/* Upon hovering the colour changes to back up the fact you can interact with this and it has a fading transition to stop the colour jumping. */
+#load-link:hover {
+  background-color: var(--col-04);
+}
+
+/* I wanted to try and use the steps animations to create a fake loading. This style of visual represents something moving forward and can start over again easily. This creates a perfect endless throbber when something has a quick loading time. */
+#load-throbber{
+  width: 24px;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--col-01);
+  animation: moveInSteps 3.5s steps(3) infinite;
+  position: relative;
+  display: none;
+}
+
+
+/* Media Queries */
+/* To make the loading more interesting I incorporated a colour change that loops. This further backs up the visual indicating that the page is loading. */
+@keyframes moveInSteps {
+ 0% {
+  left: -4%;
+  background-color: var(--col-01);
+ }
+
+ 25% {
+  background-color: var(--col-04);
+ }
+
+ 50% {
+  background-color: var(--col-03);
+ }
+
+ 75% {
+  background-color: var(--col-04);
+ }
+
+ 100% {
+  left: 9%;
+  background-color: var(--col-01);
+ }
+
+}
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+
+}
+
+@media (prefers-reduced-motion) {
+  :root{
+    scroll-behavior: auto;
+  }
+}
