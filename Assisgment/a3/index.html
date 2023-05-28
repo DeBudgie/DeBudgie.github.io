@@ -8,12 +8,44 @@
 
         <link rel="stylesheet" href="style.css">
 
+        <title>Reworded Sequel</title>
+
         <script src="script.js"></script>
 
     </head>
 
     <body>
+        <header>Reworded Sequel</header>
+
+        <aside>Create a brand new original story by <mark>highlighting</mark> text from the initial story on the left</aside>
+
+        <section id="mainSection">
+            <!-- Story come from https://www.gutenberg.org/ebooks/30272 and are in Australia public domain, Will be added one code is worked out-->
+            <div id="sourceText">
+                <button id="randomButtonFour">picking a random string</button>
+                <p id="randomExplanationFour">
+                  We can then use a random number to do other things like selecting a string from an array. In this case 
+                  we're generating a random int between 0 - 9 and using that to find a random value in our array.
+                </p>
+                </div>
+            <div id="outlookText"><span id="showText"></span></div>
+        </section>
+
+         <!-- Code from worksheet -->
+        <dialog id="modalDialog">
+            <div>This is where my 500 words will go</div>
+            <button id="closeModal">Close</button>
+        </dialog>
+    
+
+        <section id="buttonSection">
+            <!-- Icons from https://iconmonstr.com/ -->
+            <button title="Refreash" class="overlay" id="undo" onclick="refreshPage()"></button>
+            <!-- Would love for this to be a Modal but can be a link to another page if it dose not work out-->
+            <button title="FAQ" class="overlay" id="showModal"></button>
+        </section>
 
     </body>
+
 
 </html>

@@ -4,73 +4,111 @@
 }
 
 :root {
-    --co101: rgb(0,0,0);
-    --co102: rgb(69, 69, 69);
-    --co103: rgb(149, 149, 149);
-    --co104: rgb(217, 217, 217);
-    --border: 10px solid var(--co102);
+    --co101: rgb(177, 177, 177);
+    --co102: rgb(118, 118, 118);
 }
 
-#content {
-    background-color: black;
-    width: 100px;
-    height: 100px;
-    border: 10px;
-    margin: 10px;
-
+/* Icon from https://iconmonstr.com/ */
+html, body {
+    cursor: url(icons/pencil.png), default;
 }
 
-#top {
-    background-color: black;
-    width: 100px;
-    height: 100px;
-    border: 10px;
-    margin: 10px;
+header {
+    text-align: center;
+    padding: 2.5%;
+    padding-bottom: 0.5%;
+    font-size: 350%;
+    font-weight: 700;
 }
 
-#middle {
-
+aside {
+    text-align: center;
+    padding: 1.5%;
+    padding-top: 0.5%;
+    font-size: 150%;
+    font-weight: 600;
 }
 
-#bottom {
-
+mark {
+    color: white;
+    background-color: #3399FF;
 }
 
-#b1 {
-    background-color: black;
-    width: 100px;
-    height: 100px;
-    border: 10px;
-    margin: 10px;
-}
-
-#b2 {}
-
-#b3 {}
-
-#b4 {}
-
-#b5 {}
-
-#b6 {}
-
-#b7 {}
-
-#b8 {}
-
-#b9 {}
-
-#bg-wrapper {
-    background-color: black;
-    /* fit 9:16 to hight */
-    width: 71vh;
-    height: 100vh;
-    /* fit 9:16 to width */
-    /* width: 99vw; 
-    height:177vw; */
-    margin: 0 auto;
-    padding: 10px;
+#mainSection {
     display: flex;
-    flex-direction: column;
-    background-color: brown;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 76vh;
+    padding: 2.5%;
+    padding-left: 1% ;
+    padding-right: 1% ;
 }
+
+#sourceText {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 45%;
+    height: 100%;
+    padding: 15px;
+    border: 0.15rem;
+    border-style: solid;
+    overflow: auto;
+}
+
+#outlookText {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 45%;
+    height: 100%;
+    padding: 15px;
+    border: 0.15rem;
+    border-style: solid;
+    overflow: auto;
+}
+
+#undo {
+    background-image: url(icons/undo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#info {
+    background-image: url(icons/info.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#buttonSection {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 5%; 
+    right: 3%;
+}
+
+.overlay {
+    width: 40px;
+    height: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border: 0.15rem;
+    border-style: solid;
+}
+
+/* Icon from https://iconmonstr.com/ */
+.overlay:hover {
+    background-color: var(--co101);
+    cursor: url(icons/pointer.png), default;
+  }
+
+.overlay:active {
+    background-color: var(--co102);
+    cursor: url(icons/pointer.png), default;
+}
+
+/* Code from worksheet */
+#modalDialog::backdrop{
+    background-color: rgba(173, 255, 165, 0.418);
+  }
