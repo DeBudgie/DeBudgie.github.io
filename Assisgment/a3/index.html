@@ -8,42 +8,49 @@
 
         <link rel="stylesheet" href="style.css">
 
+        <link rel="icon" href="icons/Book.png">
+
         <title>Reworded Sequel</title>
 
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
 
     </head>
 
     <body>
         <header>Reworded Sequel</header>
 
-        <aside>Create a brand new original story by <mark>highlighting</mark> text from the initial story on the left</aside>
+        <aside>Experiment in creating text by <mark>highlighting</mark> words that peak your interest</aside>
 
         <section id="mainSection">
             <!-- Story come from https://www.gutenberg.org/ebooks/30272 and are in Australia public domain, Will be added one code is worked out-->
             <div id="sourceText">
-                <button id="randomButtonFour">picking a random string</button>
-                <p id="randomExplanationFour">
-                  We can then use a random number to do other things like selecting a string from an array. In this case 
-                  we're generating a random int between 0 - 9 and using that to find a random value in our array.
-                </p>
+                <div id="storyButton">
+                    <button id="nextStory">Press for a Lucy Clifford (1846-1929) short story</button>
                 </div>
-            <div id="outlookText"><span id="showText"></span></div>
+                <p id="story" onmouseup="findText()">Let us write a book, they said; but what shall it be about? A fairy story, said the elder sister. A book about kings and queens, said the other. Oh, no, said the brother, let's write about animals. We will write about them all, they cried together. So they put the paper, and pens, and ink ready. The elder sister took up a fairy story and looked at it, and put it down again. I have never known any fairies, she said, except in books; but, of course, it would not do to put one book inside another—anyone could do that. I shall not begin to-day, the little one said, for I must know a few kings and queens before I write about them, or I may say something foolish. I shall write about the pig, and the pony, and the white rabbit, said the brother; but first I must think a bit. It would never do to write a book without thinking. Then the elder sister took up the fairy story again, to see how many things were left out, for those, she thought, would do to go into her book. The little one said to herself, Really, it is no good thinking about kings and queens until I have known some, so I must wait; and while the brother was considering about the pig, and the pony, and the white rabbit, he fell asleep. So the book is not written yet, but when it is we shall know a great deal.</p>
+            </div>
+
+            <div id="outlookText"><form id="showText"><div class="newLine"></div></form></div>
+        </section>
+
+        <section id="buttonSection">
+            <button title="Refreash" class="overlay" id="undo" onclick="refreshPage()"></button>
+            <button title="FAQ" class="overlay" id="showModal"></button>
         </section>
 
          <!-- Code from worksheet -->
-        <dialog id="modalDialog">
-            <div>This is where my 500 words will go</div>
-            <button id="closeModal">Close</button>
+         <dialog id="modalDialog">
+            <div>  
+                <p>Reworded Sequel is a digital reimagining of a primary school activity that involves rearranging printed words into a new sentence. The overall design of Reworded Sequel is simple and basic on purpose. The main reason is for easy navigation through a more gamified information design layout, allowing for the playful interaction to shine. This interaction is done by highlighting the text displayed in the left box, which is then sent to the box on the right. While the text is displayed in an information design layout, moving the text somewhere else is rearranging that information and acts as another form of information design that is playful in nature. Finding the right type of code for this interaction resulted in trying out clicking and dragging technique. Clicking had no feedback and made it seem stale, dragging offered the text to disappear, which was ideal, but dragging the text felt as if you were doing too much work and not letting the code do the heavy lifting.</p>
+                <br>
+                <p>The headings have been created and displayed in the most efficient way, to get the message across quickly so more time can be spent on the interaction. The text is laid out in a standard hierarchy structure that is universally understood, and by fake highlighting the word highlighting it acts as a visual indicator of what action is needed to be taken to start the interactions. This efficiency is used regularly in information design, making it easy to understand what is going on. All feedback interactions such as the toolbar in the top right corner make the website feel alive and playful. This toolbar also holds universal icons that visualise their action and if a user is unsure of what the icon represents, a simple hover over these buttons gives a text description, giving a more informed response. This body of text was planned to be displayed on the main page, however, it goes against information design. It contradicts the subheading stating you will create a story from another and this text isn't a fun story. To follow the ideas of information design this text is now stored away in the toolbar and can be accessed when the user desires.</p>
+                <br>
+                <p>This allows for real short stories to be displayed on the home page. These short stories are randomly called, adding a playful element to the information as not only are you unaware of what story you will get but it offers more text to enhance your new story. To make the whole experience feel more authentic and personal the cursor was changed to display a pencil. This reinforces the website's identity as a unique experience and indicates that this creation is one of their own, as pencils are a tool to express oneself. The cursors over the toolbox were also changed as you don’t press a button with a pencil but with a pointer. When you take the basics of information design and add playfulness, you get a joyful experience that can only be described as Reworded Sequel.
+                </p>
+            </div>
+                <br>
+            <div id="buttonclose"><button class="overlay" id="closeModal"></button></div>
         </dialog>
-    
-
-        <section id="buttonSection">
-            <!-- Icons from https://iconmonstr.com/ -->
-            <button title="Refreash" class="overlay" id="undo" onclick="refreshPage()"></button>
-            <!-- Would love for this to be a Modal but can be a link to another page if it dose not work out-->
-            <button title="FAQ" class="overlay" id="showModal"></button>
-        </section>
 
     </body>
 

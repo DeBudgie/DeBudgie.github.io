@@ -6,9 +6,11 @@
 :root {
     --co101: rgb(177, 177, 177);
     --co102: rgb(118, 118, 118);
+    --co103: rgb(255, 255, 255);
+    --co104: #3399FF;
 }
 
-/* Icon from https://iconmonstr.com/ */
+/* All icons from https://iconmonstr.com/ */
 html, body {
     cursor: url(icons/pencil.png), default;
 }
@@ -30,8 +32,8 @@ aside {
 }
 
 mark {
-    color: white;
-    background-color: #3399FF;
+    color: var(--co103);
+    background-color: var(--co104);
 }
 
 #mainSection {
@@ -42,6 +44,29 @@ mark {
     padding: 2.5%;
     padding-left: 1% ;
     padding-right: 1% ;
+}
+
+#storyButton {
+    padding-bottom: 1%;
+    cursor: url(icons/pointer.png), default;
+}
+
+#nextStory {
+    padding: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border: 0.15rem;
+    border-style: solid;
+}
+
+#nextStory:hover {
+    background-color: var(--co101);
+    cursor: url(icons/pointer.png), default;
+  }
+
+#nextStory:active {
+    background-color: var(--co102);
+    cursor: url(icons/pointer.png), default;
 }
 
 #sourceText {
@@ -64,6 +89,16 @@ mark {
     overflow: auto;
 }
 
+.newLine {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.list {
+  margin-left: 0.5%;
+}
+
 #undo {
     background-image: url(icons/undo.svg);
     background-repeat: no-repeat;
@@ -71,7 +106,7 @@ mark {
     background-size: contain;
 }
 
-#info {
+#showModal {
     background-image: url(icons/info.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -97,7 +132,6 @@ mark {
     border-style: solid;
 }
 
-/* Icon from https://iconmonstr.com/ */
 .overlay:hover {
     background-color: var(--co101);
     cursor: url(icons/pointer.png), default;
@@ -108,7 +142,31 @@ mark {
     cursor: url(icons/pointer.png), default;
 }
 
+#modalDialog {
+    width: 70%;
+    margin: auto;
+    padding: 2%;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#buttonclose {
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+}
+
+#closeModal {
+    background-image: url(icons/X.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 /* Code from worksheet */
 #modalDialog::backdrop{
-    background-color: rgba(173, 255, 165, 0.418);
+    background-color: rgba(118, 118, 118, 0.5);
+    cursor: url(icons/pointer.png), default;
   }
