@@ -15,6 +15,7 @@ body {
     --co103: #FDD77C;
     --co104: #e9c571;
     --co105: #cea74a;
+    --co106: rgba(1, 138, 138, 0.686);
 }
 
 /*Body of Website*/
@@ -270,6 +271,12 @@ p {
     font-family: 'Lexend', sans-serif;
     font-size: larger;
     color: var(--co101);
+}
+
+h5 {
+    font-family: 'Lexend', sans-serif;
+    font-size: small;
+    color: var(--co106);
 }
 
 #buttonSection {
